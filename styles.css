@@ -23,3 +23,5 @@ body.motion-off *,body.motion-off *:before,body.motion-off *:after{animation:non
 
 /* Keep long statement tables clear of their source lines on projectors. */
 @media screen and (min-width:901px){.assets-slide .financial-table td,.assets-slide .financial-table th{padding-block:5px}.balance-tables .financial-table td,.balance-tables .financial-table th{padding-block:4px}}
+
+@media print{.sr-only,.skip-link{display:none!important}.slide:last-child{break-after:auto;page-break-after:auto}}
