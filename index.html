@@ -10,20 +10,14 @@
   <link rel="icon" type="image/png" href="./favicon.png">
   <link rel="apple-touch-icon" href="./apple-touch-icon.png">
   <link rel="preload" href="./assets/fonts/GalaxieCopernicus-Book.ttf" as="font" type="font/ttf" crossorigin>
-  <link rel="preload" href="./assets/fonts/songti.woff2" as="font" type="font/woff2" crossorigin>
-  <link rel="stylesheet" href="./styles.css">
-  <script src="./presentation.js" defer></script>
+  <link rel="preload" href="./assets/fonts/songti.woff2?v=20261122-2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="./styles.css?v=20261122-2">
+  <script src="./presentation.js?v=20261122-2" defer></script>
 </head>
 <body>
   <a class="skip-link" href="#deck">跳至簡報</a>
-  <header class="topbar">
-    <a class="brand" href="#1" aria-label="返回封面"><img src="./favicon.png" width="25" height="25" alt=""><span>VENETIAN MACAO</span></a>
-    <span class="top-meta">經濟與會計科 <span class="divider">/</span> 小組報告 <span class="edition">2024</span></span>
-    <button type="button" class="menu-toggle" aria-controls="outline" aria-expanded="false" title="目錄（M）"><span class="menu-icon" aria-hidden="true"></span><span>目錄</span></button>
-  </header>
-
-  <main id="deck" class="deck" aria-label="威尼斯人澳門財務分析簡報">
-    <section class="slide cover active" data-title="封面" aria-label="第 1 頁，共 15 頁" id="slide-1">
+<main id="deck" class="deck" aria-label="威尼斯人澳門財務分析簡報">
+    <section class="slide cover active" data-title="封面" aria-label="第 1 頁，共 16 頁" id="slide-1">
       <div class="slide-inner cover-layout">
         <div class="cover-copy">
           <p class="eyebrow reveal">FINANCIAL REVIEW <span class="gold-dot">·</span> 2024</p>
@@ -45,10 +39,10 @@
           <nav class="contents-list" aria-label="章節跳轉">
             <a class="reveal" href="#3"><span>01</span><strong>企業背景與主要業務</strong><small>03—04</small></a>
             <a class="reveal" href="#5"><span>02</span><strong>收益與損益表</strong><small>05—06</small></a>
-            <a class="reveal" href="#7"><span>03</span><strong>資產、負債與權益</strong><small>07—09</small></a>
+            <a class="reveal" href="#7"><span>03</span><strong>資產負債表與資金觀察</strong><small>07—09</small></a>
             <a class="reveal" href="#10"><span>04</span><strong>財務比率分析</strong><small>10</small></a>
             <a class="reveal" href="#11"><span>05</span><strong>企業發展、風險與展望</strong><small>11—14</small></a>
-            <a class="reveal" href="#15"><span>06</span><strong>參考資料</strong><small>15</small></a>
+            <a class="reveal" href="#15"><span>06</span><strong>參考資料與小組分工</strong><small>15–16</small></a>
           </nav>
           <aside class="scope-note reveal">
             <p class="eyebrow">READING THE NUMBERS</p><h3>先確認我們<br>在分析誰</h3>
@@ -107,7 +101,7 @@
 
     <section class="slide financial-slide" data-title="綜合損益表" id="slide-6" hidden inert>
       <div class="slide-inner">
-        <div class="section-heading reveal"><p class="eyebrow">02 / INCOME STATEMENT</p><h2>綜合收益及全面收益表</h2><p class="intro">截至 2024 年 12 月 31 日止年度 · 百萬澳門元 · 括號表示扣減</p></div>
+        <div class="section-heading reveal"><p class="eyebrow">02 / INCOME STATEMENT</p><h2>綜合損益表</h2><p class="intro">官方表名：綜合收益及全面收益表 · 2024 年度 · 百萬澳門元</p></div>
         <div class="two-tables">
           <table class="financial-table reveal"><caption>收益與經營開支</caption><thead><tr><th scope="col">項目</th><th scope="col">金額</th></tr></thead><tbody>
             <tr><td>娛樂場收益總額</td><td>54,198</td></tr><tr><td>減：佣金及獎勵</td><td>(11,214)</td></tr><tr><td>娛樂場收益淨額</td><td>42,984</td></tr><tr><td>其他淨收益</td><td>13,946</td></tr><tr class="subtotal"><th scope="row">淨收益</th><td>56,930</td></tr>
@@ -115,15 +109,15 @@
           </tbody></table>
           <div><table class="financial-table reveal"><caption>利潤與全面收益</caption><thead><tr><th scope="col">項目</th><th scope="col">金額</th></tr></thead><tbody>
             <tr class="subtotal"><th scope="row">經營利潤</th><td>11,136</td></tr><tr><td>利息收入</td><td>458</td></tr><tr><td>經扣除資本化金額後的融資成本</td><td>(3,473)</td></tr><tr><td>除所得稅前利潤</td><td>8,121</td></tr><tr><td>所得稅利益</td><td>2</td></tr><tr class="total"><th scope="row">年度利潤</th><td>8,123</td></tr><tr><td>匯兌差額</td><td>(6)</td></tr><tr><td>年度全面收益總額</td><td>8,117</td></tr>
-          </tbody></table><p class="takeaway reveal">折舊攤銷及融資成本合計 <strong>9,413</strong>，反映設施投入與融資安排對利潤的影響。</p></div>
+          </tbody></table><p class="takeaway reveal">折舊攤銷及融資成本合計 <strong>9,413</strong>，對年度利潤構成影響。</p></div>
         </div>
         <p class="source">來源：<a href="https://www.dicj.gov.mo/web/cn/information/RelContas/Venetian/RC2024.html" target="_blank" rel="noopener">DICJ：2024 綜合收益及全面收益表</a>。本表為原表摘要，合計數依原披露。</p>
       </div>
     </section>
 
-    <section class="slide financial-slide assets-slide" data-title="資產結構" id="slide-7" hidden inert>
+    <section class="slide financial-slide assets-slide" data-title="資產負債表：資產" id="slide-7" hidden inert>
       <div class="slide-inner">
-        <div class="section-heading reveal"><p class="eyebrow">03 / ASSETS</p><h2>資產集中於物業及長期設施</h2><p class="intro">2024 年 12 月 31 日 · 綜合報表 · 百萬澳門元</p></div>
+        <div class="section-heading reveal"><p class="eyebrow">03 / ASSETS</p><h2>綜合資產負債表：資產</h2><p class="intro">2024 年 12 月 31 日 · 綜合報表 · 百萬澳門元</p></div>
         <div class="assets-layout">
           <div class="assets-visual reveal"><p>資產總額</p><div class="big-number" data-count="83676">83,676</div><div class="stacked-chart" role="img" aria-label="非流動資產佔 82.7%，流動資產佔 17.3%"><div style="--amount:82.7%">82.7%</div><div style="--amount:17.3%">17.3%</div></div><div class="stacked-labels"><p>非流動資產<br><strong>69,228</strong></p><p>流動資產<br><strong>14,448</strong></p></div><p class="takeaway">重資產結構需要長期資金支持；物業及設備的賬面值較高。</p></div>
           <table class="financial-table reveal"><caption>主要資產項目</caption><thead><tr><th scope="col">項目</th><th scope="col">金額</th></tr></thead><tbody>
@@ -134,9 +128,9 @@
       </div>
     </section>
 
-    <section class="slide financial-slide" data-title="負債與權益" id="slide-8" hidden inert>
+    <section class="slide financial-slide" data-title="資產負債表：負債與權益" id="slide-8" hidden inert>
       <div class="slide-inner">
-        <div class="section-heading reveal"><p class="eyebrow">03 / LIABILITIES & EQUITY</p><h2>負債在資金結構中佔比較高</h2><p class="intro">2024 年 12 月 31 日 · 綜合報表 · 百萬澳門元</p></div>
+        <div class="section-heading reveal"><p class="eyebrow">03 / LIABILITIES & EQUITY</p><h2>綜合資產負債表：負債與權益</h2><p class="intro">2024 年 12 月 31 日 · 綜合報表 · 百萬澳門元</p></div>
         <div class="balance-equation reveal"><div><span>資產</span><strong>83,676</strong></div><b>＝</b><div><span>負債</span><strong>77,068</strong></div><b>＋</b><div><span>權益</span><strong>6,608</strong></div></div>
         <div class="two-tables balance-tables">
           <table class="financial-table reveal"><caption>負債</caption><thead><tr><th scope="col">項目</th><th scope="col">金額</th></tr></thead><tbody>
@@ -234,13 +228,26 @@
         </div>
       </div>
     </section>
+
+    <section class="slide dark-slide team-slide" data-title="小組分工" id="slide-16" hidden inert>
+      <div class="slide-inner">
+        <div class="section-heading reveal"><p class="eyebrow">07 / OUR TEAM</p><h2>小組分工</h2><p class="intro">各展所長，一起完成企業個案分析。</p></div>
+        <div class="team-grid">
+          <article class="team-member reveal"><span class="team-number">01 / COORDINATION</span><h3>梁卓然</h3><h4>統籌與簡報整合</h4><p>協調報告進度，整合內容、視覺及動畫，負責總結。</p><span class="team-pages">報告統籌 · 內容整合 · 總結</span></article>
+          <article class="team-member reveal"><span class="team-number">02 / BACKGROUND</span><h3>謝柏晞</h3><h4>企業背景與主要業務</h4><p>整理企業歷史，以及博彩、酒店、購物與會展業務。</p><span class="team-pages">第 3–4 頁 · 企業與業務</span></article>
+          <article class="team-member reveal"><span class="team-number">03 / FINANCIAL ANALYSIS</span><h3>吳智昕</h3><h4>財務報表與比率分析</h4><p>整理官方報表及財務比率，分析盈利與償債能力。</p><span class="team-pages">第 5–10 頁 · 財務分析</span></article>
+          <article class="team-member reveal"><span class="team-number">04 / DEVELOPMENT</span><h3>王嘉陸</h3><h4>企業發展與未來展望</h4><p>整理投資及非博彩發展，分析企業優勢、風險與未來方向。</p><span class="team-pages">第 11–13 頁 · 發展與展望</span></article>
+        </div>
+        <p class="team-closing reveal">謝謝聆聽<span>THANK YOU</span></p>
+      </div>
+    </section>
   </main>
 
   <footer class="controlbar">
-    <div class="slide-label"><span id="sectionLabel">封面</span><span class="control-hint">← → 翻頁</span></div>
-    <div class="pager"><button type="button" id="prev" class="icon-button" aria-label="上一頁" title="上一頁（←）"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m14 6-6 6 6 6"/></svg></button><span class="page-count"><span id="currentPage">01</span><span class="page-slash">/</span><span id="totalPages">15</span></span><button type="button" id="next" class="icon-button" aria-label="下一頁" title="下一頁（→）"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m10 6 6 6-6 6"/></svg></button></div>
+    <div class="slide-label"><button type="button" class="menu-toggle" aria-controls="outline" aria-expanded="false" title="目錄（M）"><span class="menu-icon" aria-hidden="true"></span><span>目錄</span></button><span id="sectionLabel">封面</span><span class="control-hint">← → 翻頁 · F 全屏</span></div>
+    <div class="pager"><button type="button" id="prev" class="icon-button" aria-label="上一頁" title="上一頁（←）"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m14 6-6 6 6 6"/></svg></button><span class="page-count"><span id="currentPage">01</span><span class="page-slash">/</span><span id="totalPages">16</span></span><button type="button" id="next" class="icon-button" aria-label="下一頁" title="下一頁（→）"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m10 6 6 6-6 6"/></svg></button></div>
     <div class="view-controls"><button type="button" id="motionToggle" class="text-button" aria-pressed="true" title="開啟或關閉動畫">動畫 <span id="motionState">開</span></button><button type="button" id="fullscreen" class="icon-button" aria-label="進入全屏" title="全屏（F）"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M9 4H4v5m11-5h5v5M4 15v5h5m11-5v5h-5"/></svg></button></div>
-    <div class="progress-track" role="progressbar" aria-label="簡報進度" aria-valuemin="1" aria-valuemax="15" aria-valuenow="1"><div id="progressFill"></div></div>
+    <div class="progress-track" role="progressbar" aria-label="簡報進度" aria-valuemin="1" aria-valuemax="16" aria-valuenow="1"><div id="progressFill"></div></div>
   </footer>
   <dialog id="outline" aria-labelledby="outlineTitle"><div class="outline-head"><div><p class="eyebrow">OVERVIEW</p><h2 id="outlineTitle">簡報目錄</h2></div><button id="closeOutline" class="icon-button" aria-label="關閉目錄"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m6 6 12 12M6 18 18 6"/></svg></button></div><nav id="outlineLinks" aria-label="全部投影片"></nav></dialog>
   <div id="announcer" class="sr-only" aria-live="polite" aria-atomic="true"></div>

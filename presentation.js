@@ -47,6 +47,7 @@
     });
   });
   document.getElementById('totalPages').textContent = String(slides.length).padStart(2, '0');
+  progress.setAttribute('aria-valuemax', String(slides.length));
   const outlineLinks = document.getElementById('outlineLinks');
   slides.forEach((slide, i) => {
     const link = document.createElement('a');
@@ -195,7 +196,13 @@
     } catch (_) { showToast('請使用瀏覽器的全屏選單'); }
   }
   fullscreenButton.addEventListener('click', toggleFullscreen);
-  document.addEventListener('fullscreenchange', () => fullscreenButton.setAttribute('aria-label', document.fullscreenElement ? '退出全屏' : '進入全屏'));
+  document.addEventListener('fullscreenchange', () => {
+    const isFullscreen = Boolean(document.fullscreenElement);
+    fullscreenButton.setAttribute('aria-label', isFullscreen ? '退出全屏' : '進入全屏');
+    if (isFullscreen && document.querySelector('.controlbar').contains(document.activeElement)) {
+      document.activeElement.blur();
+    }
+  });
   document.addEventListener('keydown', event => {
     if (event.ctrlKey || event.metaKey || event.altKey || event.target.closest('input,textarea,select,[contenteditable=true]')) return;
     if (outline.open) return;
