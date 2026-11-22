@@ -1,5 +1,5 @@
 @font-face{font-family:Copernicus;src:url('./assets/fonts/GalaxieCopernicus-Book.ttf') format('truetype');font-display:swap;unicode-range:U+0000-024F,U+1E00-1EFF,U+2000-206F,U+20A0-20CF,U+2190-21FF,U+2212}
-@font-face{font-family:ReportSongti;src:url('./assets/fonts/songti.woff2?v=20261122-2') format('woff2');font-display:swap}
+@font-face{font-family:ReportSongti;src:url('./assets/fonts/songti.woff2?v=20261122-3') format('woff2');font-display:swap}
 :root{--paper:#f6f3eb;--ink:#193d35;--muted:#5e6c62;--gold:#a17b3e;--gold-light:#d4b679;--line:#d2d3c3;--forest:#153a34;--serif:Copernicus,ReportSongti,'SimSun','Songti SC',serif;--ease:cubic-bezier(.22,.75,.2,1)}
 *{box-sizing:border-box}html{height:100%;scroll-behavior:smooth}body{margin:0;background:var(--paper);color:var(--ink);font-family:var(--serif);font-weight:400;overflow:hidden;-webkit-font-smoothing:antialiased}button,a{-webkit-tap-highlight-color:transparent}button{font:inherit;color:inherit;border:0;cursor:pointer;touch-action:manipulation}a{color:inherit;text-decoration:none}button:focus-visible,a:focus-visible{outline:2px solid var(--gold);outline-offset:5px}button:disabled{opacity:.3;cursor:default}p,h1,h2,h3,h4,figure{margin:0}h1,h2,h3,h4,strong,b{font-weight:400}svg{fill:none;stroke:currentColor;stroke-width:1.5;stroke-linecap:round;stroke-linejoin:round}img{display:block;width:100%;height:100%;object-fit:cover}::selection{background:#dfcaa6;color:#173c34}.skip-link{position:fixed;z-index:100;top:-60px;left:12px;padding:12px;background:var(--paper)}.skip-link:focus{top:8px}.sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}
 .topbar{height:72px;margin:0 4.5vw;border-bottom:1px solid var(--line);display:flex;align-items:center;justify-content:space-between;position:relative;z-index:20}.brand{display:flex;align-items:center;gap:13px;font-size:13px;letter-spacing:.13em}.brand img{width:25px;height:25px;object-fit:contain}.top-meta{font-size:13px;letter-spacing:.05em}.divider{margin:0 16px;color:var(--gold)}.edition{padding-left:28px;color:var(--gold)}.menu-toggle{display:flex;align-items:center;gap:10px;background:transparent;font-size:14px;min-height:44px;padding:0 4px 0 12px}.menu-icon{width:18px;height:12px;display:inline-block;border-block:1px solid currentColor;position:relative}.menu-icon:after{content:'';height:1px;background:currentColor;width:12px;position:absolute;top:5px;left:0}.menu-toggle:hover{color:var(--gold)}
@@ -256,4 +256,172 @@ body.motion-off *,body.motion-off *:before,body.motion-off *:after{animation:non
   .team-member h4 { font-size: 21px; }
   .team-member p { font-size: 17px; }
   .team-pages { font-size: 13px; }
+}
+
+
+/* Larger projection typography. Keep the complete statements at readable sizes. */
+@media screen and (min-width: 901px) {
+  :root {
+    --body-size: clamp(26px, 1.95vw, 38px);
+    --table-size: clamp(25px, 1.9vw, 36px);
+  }
+  .slide-inner { padding: 26px 4.2vw; }
+  .section-heading, .financial-slide .section-heading { margin-bottom: 18px; }
+  .section-heading h2 { font-size: clamp(46px, 3.6vw, 68px); line-height: 1.2; }
+  .intro { font-size: clamp(23px, 1.7vw, 32px); margin-top: 10px; line-height: 1.45; }
+  .eyebrow { font-size: clamp(16px, 1.15vw, 22px); margin-bottom: 8px; }
+  .source { font-size: clamp(14px, 1.04vw, 19px); padding-top: 14px; line-height: 1.5; }
+  .contents-layout { grid-template-columns: 1.25fr 1fr; gap: 4vw; }
+  .contents-list strong { font-size: clamp(28px, 2.08vw, 40px); }
+  .contents-list a { min-height: 76px; gap: 12px; }
+  .contents-list small, .contents-list a > span { font-size: 20px; }
+  .scope-note { padding-left: 28px; }
+  .scope-note h3 { font-size: clamp(36px, 2.85vw, 54px); margin-bottom: 14px; }
+  .scope-note > p:not(.eyebrow) { line-height: 1.5; margin-bottom: 12px; }
+  .scope-unit { font-size: 22px; line-height: 1.7; }
+  .timeline h3, .business-list h3, .capital-stat h3, .ratio-item h3,
+  .analysis-column h4, .outlook-list h3, .conclusion-points h3 {
+    font-size: clamp(31px, 2.25vw, 43px);
+  }
+  .timeline p, .business-list p, .capital-stat p,
+  .ratio-item > p:not(.eyebrow):not(.formula), .development-copy > p,
+  .development-points p, .analysis-column p, .outlook-list p,
+  .conclusion-points p, .team-member p { line-height: 1.5; }
+  .timeline { gap: 3vw; margin-top: 20px; }
+  .timeline h3 { margin-block: 10px 8px; }
+  .timeline-year { font-size: 46px; }
+  .history-photo { height: 22vh; }
+  .business-layout { grid-template-columns: .9fr 1.1fr; gap: 3vw; }
+  .business-list { gap: 14px; }
+  .business-list article { padding-bottom: 10px; }
+  .business-list article > span { font-size: 22px; }
+  .business-list h3 { margin-bottom: 6px; }
+  .revenue-layout { grid-template-columns: 1fr 1.25fr; gap: 5vw; }
+  .revenue-total > p:first-child { font-size: 28px; }
+  .year-growth { font-size: 24px; }
+  .revenue-caption { max-width: none; line-height: 1.5; }
+  .revenue-row > p > span { font-size: 28px; }
+  .bar-heading h3 { font-size: 32px; }
+  .bar-heading strong { font-size: 48px; }
+  .chart-note { margin-top: 24px; line-height: 1.5; }
+  .financial-table, .balance-tables .financial-table { line-height: 1.2; }
+  .two-tables { gap: 3vw; }
+  .financial-table caption, .balance-tables .financial-table caption { font-size: 30px; padding-bottom: 8px; }
+  .financial-table td, .financial-table th,
+  .assets-slide .financial-table td, .assets-slide .financial-table th,
+  .balance-tables .financial-table td, .balance-tables .financial-table th { padding-block: 4px; }
+  .financial-table thead th, .financial-table thead th:last-child { font-size: 21px; padding-block: 6px; }
+  .financial-table tr.total > * { padding-block: 6px; }
+  .financial-table td:first-child { padding-right: 8px; }
+  .financial-table td:last-child, .financial-table th:last-child { padding-left: 10px; }
+  .takeaway { line-height: 1.5; margin-top: 16px; padding-left: 16px; }
+  .assets-layout { grid-template-columns: .8fr 1.25fr; gap: 3.8vw; }
+  .assets-visual > p:first-child { font-size: 28px; }
+  .assets-visual .takeaway { max-width: none; }
+  .stacked-labels { font-size: 25px; line-height: 1.6; }
+  .stacked-labels strong { font-size: 34px; }
+  .balance-equation { padding-block: 9px; margin-bottom: 14px; }
+  .balance-equation strong { font-size: 40px; }
+  .balance-equation > div > span { font-size: 23px; }
+  .capital-grid { gap: 2.7vw; }
+  .capital-stat + .capital-stat { padding-left: 2.7vw; }
+  .stat-index, .column-label { font-size: 18px; }
+  .large-stat { font-size: clamp(80px, 6.9vw, 132px); margin-block: 22px 16px; }
+  .disclosure-note { font-size: clamp(22px, 1.6vw, 30px); line-height: 1.5; grid-template-columns: 100px 1fr; gap: 16px; }
+  .ratio-grid { gap: 3vw; }
+  .formula, .ratio-reading { font-size: clamp(23px, 1.7vw, 32px); line-height: 1.45; }
+  .ratio-number > span { font-size: clamp(92px, 7.5vw, 144px); }
+  .ratio-number { margin-top: 18px; }
+  .ratio-item h3 { margin-block: 12px 8px; }
+  .ratio-line { margin-top: 18px; }
+  .investment-stat > p, .investment-stat small { font-size: 28px; }
+  .investment-share { font-size: 25px; }
+  .investment-share b { font-size: 29px; }
+  .investment-stat > strong { font-size: clamp(60px, 4.4vw, 84px); }
+  .development-layout { gap: 4vw; }
+  .development-copy > p { margin-top: 18px; }
+  .development-right { gap: 18px; }
+  .development-right figure { height: 45%; }
+  .analysis-columns { gap: 5vw; }
+  .analysis-column { padding-top: 14px; }
+  .analysis-column > h3 { font-size: 43px; margin-block: 8px 16px; }
+  .analysis-column article + article { margin-top: 17px; }
+  .analysis-column p { max-width: none; }
+  .analysis-column h4 { margin-bottom: 6px; }
+  .outlook-list article { grid-template-columns: 65px 1fr; gap: 22px; padding-block: 24px; }
+  .outlook-en { display: none; }
+  .outlook-index { font-size: 45px; }
+  .outlook-list h3 { margin-bottom: 8px; }
+  .conclusion-slide .slide-inner { padding-top: 30px; }
+  .conclusion-slide .section-heading h2 { font-size: clamp(58px, 4.5vw, 86px); line-height: 1.3; }
+  .conclusion-points { gap: 3vw; }
+  .closing { font-size: 28px; }
+  .reference-layout { grid-template-columns: 1.4fr 1fr; gap: 3.5vw; }
+  .reference-list h3 { font-size: clamp(28px, 2.05vw, 39px); line-height: 1.3; }
+  .reference-list p, .reference-note p { font-size: clamp(23px, 1.68vw, 32px); line-height: 1.45; }
+  .reference-list > a, .reference-images { padding-block: 14px; gap: 14px; }
+  .reference-note { padding-left: 25px; }
+  .reference-note h3 { font-size: 37px; margin-bottom: 16px; }
+  .reference-note p + p { margin-top: 14px; }
+  .reference-note .copyright-note { font-size: 19px; line-height: 1.5; }
+  .team-grid { gap: 24px 5vw; }
+  .team-member { padding-top: 16px; }
+  .team-member h3 { font-size: clamp(43px, 3.3vw, 63px); margin-block: 10px 8px; }
+  .team-member h4 { font-size: clamp(29px, 2.15vw, 41px); margin-bottom: 9px; }
+  .team-member p { font-size: var(--body-size); }
+  .team-number, .team-pages { font-size: 18px; }
+  .team-pages { margin-top: 12px; }
+  .team-closing { font-size: 30px; margin-top: 22px; padding-top: 16px; }
+  .team-closing span { font-size: 19px; }
+  .cover-layout { padding: 0 0 0 4.2vw; grid-template-columns: 1.25fr 1fr; gap: 3vw; }
+  .cover h1 { font-size: clamp(72px, 5.8vw, 110px); }
+  .cover-subtitle { font-size: clamp(38px, 3.2vw, 61px); line-height: 1.45; }
+  .cover-period { font-size: 25px; }
+  .cover-copy .eyebrow { font-size: 20px; }
+  .cover-bottom { font-size: 18px; }
+}
+@media screen and (min-width: 901px) and (max-height: 900px) {
+  .slide-inner { padding-block: 22px; }
+  .section-heading, .financial-slide .section-heading { margin-bottom: 14px; }
+  .financial-table td, .financial-table th,
+  .assets-slide .financial-table td, .assets-slide .financial-table th,
+  .balance-tables .financial-table td, .balance-tables .financial-table th { padding-block: 3px; }
+  .balance-equation { padding-block: 6px; margin-bottom: 10px; }
+  .balance-equation strong { font-size: 36px; }
+  .team-grid { gap: 20px 4vw; }
+  .team-member { padding-top: 12px; }
+  .team-member h3 { margin-block: 8px 6px; }
+  .team-pages { margin-top: 8px; }
+  .team-closing { margin-top: 16px; padding-top: 12px; }
+  .cover-layout { padding-block: 0; }
+}
+@media screen and (max-width: 900px) {
+  :root { --body-size: 22px; --table-size: 21px; }
+  .section-heading h2 { font-size: 38px; }
+  .intro { font-size: 21px; }
+  .contents-list strong { font-size: 24px; }
+  .scope-note > p:not(.eyebrow), .reference-list p, .reference-note p { font-size: 22px; }
+  .timeline h3, .business-list h3, .capital-stat h3, .ratio-item h3,
+  .analysis-column h4, .outlook-list h3, .conclusion-points h3 { font-size: 28px; }
+  .reference-list h3 { font-size: 26px; }
+  .team-member h3 { font-size: 42px; }
+  .team-member h4 { font-size: 28px; }
+  .team-member p { font-size: 22px; }
+  .financial-table caption, .balance-tables .financial-table caption { font-size: 27px; }
+}
+
+@media screen and (min-width: 901px) {
+  .team-number, .team-pages { display: none; }
+  .team-member h3 { line-height: 1.2; }
+  .team-member h4 { line-height: 1.3; }
+  .analysis-column .column-label { display: none; }
+  .analysis-column > h3 { line-height: 1.1; margin: 0 0 12px; }
+  .analysis-column article + article { margin-top: 12px; }
+  .analysis-column p { line-height: 1.4; }
+}
+@media screen and (min-width: 901px) and (max-height: 900px) {
+  .financial-slide .section-heading .eyebrow { display: none; }
+  .financial-slide .section-heading { margin-bottom: 10px; }
+  .financial-table caption, .balance-tables .financial-table caption { padding-bottom: 6px; }
+  .assets-visual .stacked-chart { margin-top: 24px; }
 }
